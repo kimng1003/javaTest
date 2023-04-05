@@ -1,4 +1,4 @@
-package com.javaStudy.ch4;
+package com.javaStudy.ch4.level01;
 
 import java.util.Scanner;
 
