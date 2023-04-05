@@ -2,7 +2,7 @@ package com.javaStudy.ch4;
 
 import java.util.Scanner;
 
-public class nomalAp1 {
+public class normalAp1 {
 
 	public static void main(String[] args) {
 		
