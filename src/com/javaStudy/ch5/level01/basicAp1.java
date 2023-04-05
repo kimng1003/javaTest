@@ -1,4 +1,4 @@
-package com.javaStudy.ch5;
+package com.javaStudy.ch5.level01;
 
 public class basicAp1 {
 	
