@@ -1,5 +1,7 @@
 package com.javaStudy.ch5.section01;
 
+import java.util.Scanner;
+
 public class hardAp1 {
 
 	public static void main(String[] args) {
@@ -24,6 +26,40 @@ public class hardAp1 {
 		 * 양수 혹은 홀수만 입력해야 합니다.
 		 */
 		
+
+		// 받은 크기만큼 정수형 배열 할당
+		// 배열 중간까지 1씩 증가하는 오름차순
+		// 중간 이후부터 1씩 감소하는 내림차순
 		
+		for(;;){
+			
+			Scanner sc = new Scanner(System.in);
+			System.out.print("홀수인 양의 정수를 입력하세요: ");
+			int num = sc.nextInt();
+			
+			if(num % 2 == 1) {
+				int iarr[] = new int[num];
+				int mid = (num / 2 + 1);
+				int cnt = 0;
+				
+				for(int i = 0; i < mid; i++) {
+					iarr[i] = ++cnt;
+				}
+		
+				for(int i = mid; i < iarr.length; i++) {
+					iarr[i] = --cnt;
+				}
+				for(int i = 0; i < iarr.length; i++) {
+					
+					System.out.print(iarr[i] + " ");
+				}
+				break;
+				
+			} else {
+				System.out.println("양수 혹은 홀수만 입력하세요.");
+				continue;
+			}
+		}
+	
 	}
 }
