@@ -1,4 +1,4 @@
-package com.javaStudy.ch5.level01;
+package com.javaStudy.ch5.section01;
 
 import java.util.Scanner;
 
