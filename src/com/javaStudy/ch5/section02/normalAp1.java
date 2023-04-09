@@ -1,5 +1,7 @@
 package com.javaStudy.ch5.section02;
 
+import java.util.Scanner;
+
 public class normalAp1 {
 
 	public static void main(String[] args) {
@@ -24,5 +26,44 @@ public class normalAp1 {
          * W H J X 
          * W S S J 
 		 * */
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int num1 = 0;
+		int num2 = 0;
+		char random = 'a';
+		
+		while(true) {
+			System.out.print("첫번째 정수 입력 : ");
+			num1 = sc.nextInt();
+			if(num1 > 0 && num1 < 11) {
+				num1++;
+			} else {
+				System.out.print("반드시 1~10 정수 입력. 재입력: ");
+			} 
+			break;
+		}
+		
+		while(true) {
+			System.out.print("두번째 정수 입력 : ");
+			num2 = sc.nextInt();
+			if(num2 > 0 && num2 < 11) {
+				num2++;
+			} else {
+				System.out.print("반드시 1~10 정수 입력. 재입력: ");
+			} 
+			break;
+		}
+		
+		char arr[][] = new char[num1][num2];
+		
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j < arr[i].length; j++){
+				arr[i][j] = (char)(Math.random() * ('Z' - 'A' + 1) + 'A');
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+	
 	}
 }
