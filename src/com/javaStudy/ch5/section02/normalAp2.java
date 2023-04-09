@@ -33,7 +33,40 @@ public class normalAp2 {
 		 * 김정희 대조영
 		 * 김유신 이사부
 		 */
-
+		
+		String student[] = new String []{"홍길동", "이순신", "유관순", "윤봉길", "장영실", "임꺽정", "장보고", "이태백", "김정희", "대조영", "김유신", "이사부"};
+		
+		String line1[][] = new String[3][2];
+		String line2[][] = new String[3][2];
+		
+		int a = 0;
+		System.out.println("=== 1분단 ===");
+		for(int i = 0; i < line1.length; i++) {
+			for(int j = 0; j < line1[i].length; j++) {
+				
+				line1[i][j] = student[a];
+				a++;
+				System.out.print(line1[i][j] + " ");
+				
+			}
+			System.out.println();
+		}
+		
+		System.out.println("=== 2분단 ===");
+		for(int i = 0; i < line2.length; i++) {
+			for(int j = 0; j < line2[i].length; j++) {
+				
+				line2[i][j] = student[a];
+				a++;
+				System.out.print(line2[i][j] + " ");
+				
+			}
+			System.out.println();
+		}
+		
+		
+		
+		
 		
 	}
 }
