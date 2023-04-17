@@ -3,6 +3,7 @@ package com.javaStudy.ch9.hw1;
 public class LibraryManager {
 
 	private Member mem = null;
+	
 	private Book[] bList = new Book[5];
 	
 	{
@@ -24,8 +25,6 @@ public class LibraryManager {
 		this.mem = mem;
 		this.bList = bList;
 	}
-
-	
 
 	public Member getMem() {
 		return mem;
@@ -50,6 +49,7 @@ public class LibraryManager {
 	
 	public void insertMember(Member mem) {
 		
+		this.mem = mem;
 	}
 	
 	public Member myInfo() {
@@ -71,15 +71,32 @@ public class LibraryManager {
 				input[count] = bList[i];
 				count++;
 			}
-			
-		}
 		
+		}
 		return input;
 	}
 	
 	public int rentBook(int index) {
+		int result = 0;
 		
-		return 0;
+		// 만화책 참조하고, 제한나이>회원나이 인 경우
+		if(bList[index] instanceof AniBook) {
+			if(mem.getAge() < ((AniBook) bList[index]).getAccessAge())
+			result = 1;
+		}
+		
+		// 요리책 참조, 쿠폰 유인 경우
+		if(bList[index] instanceof CookBook) {
+			if(((CookBook) bList[index]).isCoupon()) {
+			mem.setCouponCount(mem.getCouponCount() + 1);
+			result = 2;
+			}
+		}
+		
+		return result;
+		
+		
+		
 	}
 	
 	
